@@ -15,7 +15,7 @@ var height = svgHeight - margin.top - margin.bottom;
 // Create an SVG wrapper, append an SVG group that will hold the chart,
 // and shift the latter by left and top margins.
 var svg = d3
-  .select(".chart")
+  .select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -26,7 +26,7 @@ var chartGroup = svg.append("g")
   //.attr("class", "chart");
 
 // Import Data
-d3.csv("data/data.csv").then(function(povertyData) {
+d3.csv("assets/data/data.csv").then(function(povertyData) {
     // console.log(povertyData);
 
     // caste poverty and healthcare data as numbers
